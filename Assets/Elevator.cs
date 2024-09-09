@@ -199,6 +199,7 @@ public class Elevator : MonoBehaviour
         }
         else
         {
+        //instead of this:
             SelectFloor(5);
             GoToNextFloor();
             MoveElevator(3, "up");
@@ -213,7 +214,31 @@ public class Elevator : MonoBehaviour
             unlockElevator(123456); //this should be user input
             UnselectFloor(5);
             GoToNextFloor();
+
+            // to much code in Start(). you should migrate that into another method to ease readability
+            // do this:
+            // RegularBehaviour();
+            // its easy to understand that there are two types of behviours,l shabat or regular. 
+            
         }
+/*
+        void RegularBehaviour(){
+                    SelectFloor(5);
+            GoToNextFloor();
+            MoveElevator(3, "up");
+            MoveElevator(2, "down");
+            OpenDoor();
+            CloseDoor();
+            EmergencyStop();
+            LockElevator();
+            ToggleFan();
+            ToggleFan();
+            ToggleAlarm();
+            unlockElevator(123456); //this should be user input
+            UnselectFloor(5);
+            GoToNextFloor();
+        }
+        */
     }
 
 }
