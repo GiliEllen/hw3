@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+// great job
 public class IntegerManipulator : MonoBehaviour
 {
     void Start() {
@@ -14,6 +14,16 @@ public class IntegerManipulator : MonoBehaviour
     {
         int result = num * 2; 
         Debug.Log("The result of operating on the integer is: " + result);
+        // this method could return num*2. 
+        /*
+            public int MultiplyInteger(int num)
+    {
+        int result = num * 2; 
+        Debug.Log("The result of operating on the integer is: " + result);
+        return result;
+        // this method could return the result which will make it more useful
+    }
+        */
     }
 
     public void CheckIntegerBiggerThan(int num)
@@ -27,6 +37,21 @@ public class IntegerManipulator : MonoBehaviour
             Debug.Log("The number is 10 or less.");
         }
     }
+/*
+you could use early exit like so:
+    public void CheckIntegerBiggerThan(int num)
+    {
+        if (num > 10)
+        {
+            Debug.Log("The number is greater than 10.");
+            return; //exits the method immediatly, meaning lines below wont execute
+        }
+            
+        Debug.Log("The number is 10 or less.");
+    }
+
+*/
+    
 
     public void SwitchInteger(int num)
     {
